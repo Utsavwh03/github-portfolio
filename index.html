@@ -14,12 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.2/dist/darkly/bootstrap.min.css"
-      integrity="sha384-z4JkLdMKBsMDFSBj+M4ljZ7qYXdC8gG1FzCGfD1QQbX9Te9dF8mJYRc+FQLT8Dy+"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
@@ -28,9 +23,9 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body data-theme="dark">
+  <body data-theme="light">
     <header class="glass-nav">
-      <nav class="navbar navbar-expand-lg container-lg px-3">
+      <nav class="navbar navbar-expand-lg container-lg px-3 justify-content-center">
         <a class="navbar-brand d-flex align-items-center gap-2" href="#hero">
           <span class="brand-avatar">U</span>
           <span class="fw-semibold">Utsav Dhanuka</span>
@@ -46,8 +41,8 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="primaryNav">
-          <ul class="navbar-nav ms-auto align-items-lg-center">
+        <div class="collapse navbar-collapse justify-content-lg-center" id="primaryNav">
+          <ul class="navbar-nav align-items-lg-center text-center gap-lg-3">
             <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
             <li class="nav-item">
               <a class="nav-link" href="#experience">Experience</a>
@@ -58,15 +53,15 @@
             </li>
             <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
             <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-            <li class="nav-item ms-lg-3">
+            <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
               <button
                 id="themeToggle"
-                class="btn btn-outline-light btn-sm rounded-pill d-flex align-items-center gap-2"
+                class="btn btn-outline-dark btn-sm rounded-pill d-flex align-items-center gap-2 mx-auto"
                 type="button"
                 aria-label="Toggle theme"
               >
-                <i class="bi bi-moon-stars"></i>
-                <span>Dark</span>
+                <i class="bi bi-sun-fill"></i>
+                <span>Light</span>
               </button>
             </li>
           </ul>
@@ -75,11 +70,11 @@
     </header>
 
     <main>
-      <section id="hero" class="section-hero position-relative overflow-hidden">
+      <section id="hero" class="section-hero position-relative overflow-hidden text-center">
         <div class="hero-gradient rounded-4"></div>
         <div class="container-lg position-relative py-6">
-          <div class="row g-5 align-items-center">
-            <div class="col-lg-7">
+          <div class="row g-5 justify-content-center">
+            <div class="col-xl-8">
               <div class="text-uppercase text-accent fw-semibold mb-3 small tracking-wide">
                 AI/ML Research · Systems · Trading Agents
               </div>
@@ -99,7 +94,7 @@
                   <i class="bi bi-envelope-fill me-2"></i>Email Me
                 </a>
                 <a
-                  class="btn btn-outline-light btn-lg rounded-pill px-4"
+                  class="btn btn-ghost btn-lg rounded-pill px-4"
                   href="https://github.com/Utsavwh03"
                   target="_blank"
                   rel="noreferrer"
@@ -107,7 +102,7 @@
                   <i class="bi bi-github me-2"></i>GitHub Profile
                 </a>
                 <a
-                  class="btn btn-outline-light btn-lg rounded-pill px-4"
+                  class="btn btn-ghost btn-lg rounded-pill px-4"
                   href="https://www.linkedin.com/in/utsav-dhanuka-a36b14226/"
                   target="_blank"
                   rel="noreferrer"
@@ -115,7 +110,7 @@
                   <i class="bi bi-linkedin me-2"></i>LinkedIn
                 </a>
               </div>
-              <div class="row row-cols-1 row-cols-md-3 g-3 hero-meta">
+              <div class="row row-cols-1 row-cols-md-3 g-3 hero-meta justify-content-center">
                 <div class="col">
                   <div class="meta-card py-3 px-3 h-100 rounded-4">
                     <div class="meta-title">Location</div>
@@ -136,11 +131,11 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-5">
+            <div class="col-xl-7">
               <div class="glass-card rounded-4 p-4 mb-4 shadow-lg">
                 <h2 class="h5 text-uppercase text-accent mb-3">At a glance</h2>
-                <ul class="list-unstyled mb-0 d-grid gap-3">
-                  <li class="d-flex gap-3">
+                <ul class="fancy-list list-unstyled mb-0 d-grid gap-3">
+                  <li class="d-md-flex gap-3 align-items-start">
                     <div class="icon-badge">
                       <i class="bi bi-lightning-charge-fill"></i>
                     </div>
@@ -148,7 +143,7 @@
                       <strong>Founding Engineer</strong> – VedaQuant AI (Quant AI startup)
                     </div>
                   </li>
-                  <li class="d-flex gap-3">
+                  <li class="d-md-flex gap-3 align-items-start">
                     <div class="icon-badge">
                       <i class="bi bi-graph-up-arrow"></i>
                     </div>
@@ -157,7 +152,7 @@
                       (15m–1d horizons)
                     </div>
                   </li>
-                  <li class="d-flex gap-3">
+                  <li class="d-md-flex gap-3 align-items-start">
                     <div class="icon-badge">
                       <i class="bi bi-shield-lock-fill"></i>
                     </div>
@@ -166,7 +161,7 @@
                       distributed settings
                     </div>
                   </li>
-                  <li class="d-flex gap-3">
+                  <li class="d-md-flex gap-3 align-items-start">
                     <div class="icon-badge">
                       <i class="bi bi-cpu-fill"></i>
                     </div>
@@ -213,10 +208,10 @@
         </div>
       </section>
 
-      <section id="about" class="py-6">
+      <section id="about" class="py-6 text-center">
         <div class="container-lg">
-          <div class="row g-5 align-items-start">
-            <div class="col-lg-6">
+          <div class="row g-5 justify-content-center">
+            <div class="col-xl-7">
               <div class="section-heading">
                 <span class="badge rounded-pill text-bg-primary-subtle text-primary-emphasis mb-3">
                   About
@@ -230,7 +225,6 @@
               </div>
               <div class="timeline mt-4">
                 <div class="timeline-item">
-                  <div class="timeline-dot"></div>
                   <div class="timeline-content">
                     <h3 class="h5 mb-1">University of Massachusetts, Amherst</h3>
                     <p class="text-accent small mb-1">
@@ -259,7 +253,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-xl-5">
               <div class="glass-card rounded-4 p-4 p-lg-5 h-100">
                 <h3 class="h5 mb-3 text-accent text-uppercase">Current Interests</h3>
                 <div class="d-flex flex-wrap gap-2">
@@ -276,7 +270,7 @@
         </div>
       </section>
 
-      <section id="experience" class="py-6 bg-soft">
+      <section id="experience" class="py-6 bg-soft text-center">
         <div class="container-lg">
           <div class="section-heading text-center mb-5">
             <span class="badge rounded-pill text-bg-primary-subtle text-primary-emphasis mb-3">
@@ -284,10 +278,10 @@
             </span>
             <h2 class="h1 fw-semibold">Leading in research, product & systems</h2>
           </div>
-          <div class="row g-4">
+          <div class="row g-4 justify-content-center">
             <div class="col-lg-6">
               <div class="experience-card rounded-4 p-4 h-100">
-                <div class="d-flex justify-content-between align-items-start mb-3">
+                <div class="d-flex flex-column gap-3 align-items-center mb-3">
                   <div>
                     <h3 class="h5 mb-1">Founding Engineer – VedaQuant AI (Stealth)</h3>
                     <div class="text-secondary small">Kolkata, India · May 2025 – Present</div>
@@ -297,25 +291,22 @@
                 <p class="text-secondary">
                   Building a multi-agent trading framework that mirrors real trading desks.
                 </p>
-                <ul class="list-unstyled d-grid gap-2 text-secondary mb-0">
+                <ul class="fancy-list list-unstyled d-grid gap-2 text-secondary mb-0">
                   <li>
-                    <i class="bi bi-check-circle-fill text-primary me-2"></i>Achieved <strong>R² of 99.21</strong> and
-                    <strong>MAE 0.0045</strong> in real-time Nifty 50 forecasting across multiple horizons.
+                    Achieved <strong>R² of 99.21</strong> and <strong>MAE 0.0045</strong> in real-time Nifty 50 forecasting across multiple horizons.
                   </li>
                   <li>
-                    <i class="bi bi-check-circle-fill text-primary me-2"></i>Integrated FinBERT sentiment over
-                    <strong>5,000+ daily</strong> financial news sources, boosting performance by 7–10%.
+                    Integrated FinBERT sentiment over <strong>5,000+ daily</strong> financial news sources, boosting performance by 7–10%.
                   </li>
                   <li>
-                    <i class="bi bi-check-circle-fill text-primary me-2"></i>Designing multi-agent framework aggregating
-                    technical, fundamental, sentiment & macro signals.
+                    Designing multi-agent framework aggregating technical, fundamental, sentiment &amp; macro signals.
                   </li>
                 </ul>
               </div>
             </div>
             <div class="col-lg-6">
               <div class="experience-card rounded-4 p-4 h-100">
-                <div class="d-flex justify-content-between align-items-start mb-3">
+                <div class="d-flex flex-column gap-3 align-items-center mb-3">
                   <div>
                     <h3 class="h5 mb-1">Research & Development Intern – Samsung Research Institute</h3>
                     <div class="text-secondary small">Noida, India · May 2024 – Aug 2024</div>
@@ -323,18 +314,15 @@
                   <span class="badge rounded-pill text-bg-info">Computer Vision</span>
                 </div>
                 <p class="text-secondary">OCR &amp; document understanding for large-scale medical records.</p>
-                <ul class="list-unstyled d-grid gap-2 text-secondary mb-0">
+                <ul class="fancy-list list-unstyled d-grid gap-2 text-secondary mb-0">
                   <li>
-                    <i class="bi bi-check-circle-fill text-info me-2"></i>Digitized <strong>1,000+ medical documents</strong>
-                    via advanced OCR pipelines &amp; OpenCV preprocessing.
+                    Digitized <strong>1,000+ medical documents</strong> via advanced OCR pipelines &amp; OpenCV preprocessing.
                   </li>
                   <li>
-                    <i class="bi bi-check-circle-fill text-info me-2"></i>Converted raw OCR output into structured JSON
-                    with medical entities using custom parsers.
+                    Converted raw OCR output into structured JSON with medical entities using custom parsers.
                   </li>
                   <li>
-                    <i class="bi bi-check-circle-fill text-info me-2"></i>Integrated and fine-tuned PaddleOCR in Samsung’s
-                    Android stack achieving <strong>89% accuracy</strong>.
+                    Integrated and fine-tuned PaddleOCR in Samsung’s Android stack achieving <strong>89% accuracy</strong>.
                   </li>
                 </ul>
               </div>
@@ -343,7 +331,7 @@
         </div>
       </section>
 
-      <section id="projects" class="py-6">
+      <section id="projects" class="py-6 text-center">
         <div class="container-lg">
           <div class="section-heading text-center mb-5">
             <span class="badge rounded-pill text-bg-primary-subtle text-primary-emphasis mb-3">
@@ -355,10 +343,10 @@
               the corresponding code or paper.
             </p>
           </div>
-          <div class="row g-4">
+          <div class="row g-4 justify-content-center">
             <div class="col-md-6 col-xl-4">
               <article class="project-card h-100 rounded-4 p-4">
-                <div class="d-flex justify-content-between align-items-start mb-3">
+                <div class="d-flex flex-column gap-3 align-items-center mb-3">
                   <div>
                     <h3 class="h5 mb-1">Developing &amp; Evaluating Safer Large Language Models</h3>
                     <div class="text-secondary small">Safety Fundamentals for Gen AI · Feb 2025 – Apr 2025</div>
@@ -369,18 +357,18 @@
                   Implemented RLHF and DPO pipelines with <strong>bert-base-uncased</strong> reward modeling and
                   <strong>gpt2-medium</strong> safety-tuned generation.
                 </p>
-                <ul class="list-unstyled d-grid gap-2 text-secondary small mb-4">
-                  <li>Applied RESTA &amp; DARE decoding on <strong>Gemma-2</strong> variants with SFT & safety vectors.</li>
+                <ul class="fancy-list list-unstyled d-grid gap-2 text-secondary small mb-4">
+                  <li>Applied RESTA &amp; DARE decoding on <strong>Gemma-2</strong> variants with SFT &amp; safety vectors.</li>
                   <li>Reduced LLM unsafety score from <strong>0.5663 → 0.3982</strong> under PEFT and full fine-tuning.</li>
                 </ul>
-                <div class="d-flex flex-wrap gap-2 mb-3">
+                <div class="d-flex flex-wrap gap-2 mb-3 justify-content-center">
                   <span class="badge rounded-pill text-bg-light text-light">RLHF</span>
                   <span class="badge rounded-pill text-bg-light text-light">DPO</span>
                   <span class="badge rounded-pill text-bg-light text-light">Safety</span>
                   <span class="badge rounded-pill text-bg-light text-light">PyTorch</span>
                 </div>
                 <a
-                  class="btn btn-sm btn-outline-light rounded-pill"
+                  class="btn btn-sm btn-ghost rounded-pill"
                   href="https://github.com/Utsav03wh/Safety-LLM/tree/main"
                   target="_blank"
                   rel="noreferrer"
@@ -391,7 +379,7 @@
             </div>
             <div class="col-md-6 col-xl-4">
               <article class="project-card h-100 rounded-4 p-4">
-                <div class="d-flex justify-content-between align-items-start mb-3">
+                <div class="d-flex flex-column gap-3 align-items-center mb-3">
                   <div>
                     <h3 class="h5 mb-1">Counter-Arguments to Anti-Vaccine Tweets</h3>
                     <div class="text-secondary small">B.Tech Thesis · Aug 2024 – Present</div>
@@ -402,19 +390,19 @@
                   End-to-end pipeline generating counter-arguments to vaccine misinformation with compact,
                   fine-tuned LLMs.
                 </p>
-                <ul class="list-unstyled d-grid gap-2 text-secondary small mb-4">
+                <ul class="fancy-list list-unstyled d-grid gap-2 text-secondary small mb-4">
                   <li>Fine-tuned <strong>LLaMA</strong> &amp; <strong>Gemma</strong> using GPT-generated, label-aware data.</li>
                   <li>Human evaluation with pro &amp; anti-vaccine annotators for balanced assessment.</li>
                   <li>Reached <strong>ROUGE-L 0.304</strong> / <strong>BERTScore F1 0.895</strong> rivaling GPT-4o quality.</li>
                 </ul>
-                <div class="d-flex flex-wrap gap-2 mb-3">
+                <div class="d-flex flex-wrap gap-2 mb-3 justify-content-center">
                   <span class="badge rounded-pill text-bg-light text-light">LLMs</span>
                   <span class="badge rounded-pill text-bg-light text-light">Argument Generation</span>
                   <span class="badge rounded-pill text-bg-light text-light">Responsible AI</span>
                 </div>
-                <div class="d-flex flex-wrap gap-2">
+                <div class="d-flex flex-wrap gap-2 justify-content-center">
                   <a
-                    class="btn btn-sm btn-outline-light rounded-pill"
+                    class="btn btn-sm btn-ghost rounded-pill"
                     href="https://github.com/Utsavwh03/Counter-Vax/tree/main"
                     target="_blank"
                     rel="noreferrer"
@@ -422,7 +410,7 @@
                     View Code <i class="bi bi-arrow-up-right ms-1"></i>
                   </a>
                   <a
-                    class="btn btn-sm btn-outline-light rounded-pill"
+                    class="btn btn-sm btn-ghost rounded-pill"
                     href="https://arxiv.org/abs/2510.16359"
                     target="_blank"
                     rel="noreferrer"
@@ -434,7 +422,7 @@
             </div>
             <div class="col-md-6 col-xl-4">
               <article class="project-card h-100 rounded-4 p-4">
-                <div class="d-flex justify-content-between align-items-start mb-3">
+                <div class="d-flex flex-column gap-3 align-items-center mb-3">
                   <div>
                     <h3 class="h5 mb-1">RAG with Hadoop for Chain-of-Thought LLMs</h3>
                     <div class="text-secondary small">DBMS Lab · Feb 2024 – Apr 2024</div>
@@ -445,19 +433,19 @@
                   Distributed RAG pipeline combining Hadoop, Solr, and Zookeeper to power chain-of-thought queries with
                   Gemini via LangChain.
                 </p>
-                <ul class="list-unstyled d-grid gap-2 text-secondary small mb-4">
+                <ul class="fancy-list list-unstyled d-grid gap-2 text-secondary small mb-4">
                   <li>Deployed Solr/Zookeeper as indexers for large-scale structured data.</li>
                   <li>Integrated LangChain with <strong>Prometheus</strong> / <strong>Grafana</strong> monitoring.</li>
                   <li>Leveraged Hadoop MapReduce and Apache Solr for scalable retrieval.</li>
                 </ul>
-                <div class="d-flex flex-wrap gap-2 mb-3">
+                <div class="d-flex flex-wrap gap-2 mb-3 justify-content-center">
                   <span class="badge rounded-pill text-bg-light text-light">RAG</span>
                   <span class="badge rounded-pill text-bg-light text-light">Hadoop</span>
                   <span class="badge rounded-pill text-bg-light text-light">Solr</span>
                   <span class="badge rounded-pill text-bg-light text-light">LangChain</span>
                 </div>
                 <a
-                  class="btn btn-sm btn-outline-light rounded-pill"
+                  class="btn btn-sm btn-ghost rounded-pill"
                   href="https://github.com/Utsav03wh/DBMS-Laboratory-Spr-24/tree/main/A5"
                   target="_blank"
                   rel="noreferrer"
@@ -468,7 +456,7 @@
             </div>
             <div class="col-md-6 col-xl-4">
               <article class="project-card h-100 rounded-4 p-4">
-                <div class="d-flex justify-content-between align-items-start mb-3">
+                <div class="d-flex flex-column gap-3 align-items-center mb-3">
                   <div>
                     <h3 class="h5 mb-1">Reliable UDP &amp; Concurrent Mail Server</h3>
                     <div class="text-secondary small">
@@ -481,18 +469,18 @@
                   Modified transport protocol (MTP) atop UDP delivering TCP-like reliability and a concurrent mail
                   server/client stack.
                 </p>
-                <ul class="list-unstyled d-grid gap-2 text-secondary small mb-4">
+                <ul class="fancy-list list-unstyled d-grid gap-2 text-secondary small mb-4">
                   <li>Multi-threaded architecture supporting <strong>25+ simultaneous sockets</strong>.</li>
                   <li>Stress-tested under <strong>50% simulated packet loss</strong> with guaranteed delivery.</li>
                   <li>SMTP/POP3-based mail server for efficient email transmission.</li>
                 </ul>
-                <div class="d-flex flex-wrap gap-2 mb-3">
+                <div class="d-flex flex-wrap gap-2 mb-3 justify-content-center">
                   <span class="badge rounded-pill text-bg-light text-light">C</span>
                   <span class="badge rounded-pill text-bg-light text-light">Networking</span>
                   <span class="badge rounded-pill text-bg-light text-light">Systems</span>
                 </div>
                 <a
-                  class="btn btn-sm btn-outline-light rounded-pill"
+                  class="btn btn-sm btn-ghost rounded-pill"
                   href="https://github.com/Utsavwh03/Reliable-UDP"
                   target="_blank"
                   rel="noreferrer"
@@ -503,7 +491,7 @@
             </div>
             <div class="col-md-6 col-xl-4">
               <article class="project-card h-100 rounded-4 p-4">
-                <div class="d-flex justify-content-between align-items-start mb-3">
+                <div class="d-flex flex-column gap-3 align-items-center mb-3">
                   <div>
                     <h3 class="h5 mb-1">Virtual Memory Simulation with Paging</h3>
                     <div class="text-secondary small">Operating Systems Lab · Mar 2024 – Aug 2024</div>
@@ -513,17 +501,17 @@
                 <p class="text-secondary">
                   Virtual memory system in C simulating OS-style memory management for multiple concurrent processes.
                 </p>
-                <ul class="list-unstyled d-grid gap-2 text-secondary small mb-4">
+                <ul class="fancy-list list-unstyled d-grid gap-2 text-secondary small mb-4">
                   <li>Implemented MMU with translation, page fault handling &amp; LRU replacement.</li>
                   <li>Designed process scheduler for fair, realistic execution flow.</li>
                 </ul>
-                <div class="d-flex flex-wrap gap-2 mb-3">
+                <div class="d-flex flex-wrap gap-2 mb-3 justify-content-center">
                   <span class="badge rounded-pill text-bg-light text-light">C</span>
                   <span class="badge rounded-pill text-bg-light text-light">Operating Systems</span>
                   <span class="badge rounded-pill text-bg-light text-light">Simulation</span>
                 </div>
                 <a
-                  class="btn btn-sm btn-outline-light rounded-pill"
+                  class="btn btn-sm btn-ghost rounded-pill"
                   href="https://github.com/Utsavwh03/Virtual-Memory"
                   target="_blank"
                   rel="noreferrer"
@@ -563,7 +551,7 @@
                 </p>
                 <div class="d-flex flex-wrap gap-3">
                   <a
-                    class="btn btn-outline-light rounded-pill"
+                    class="btn btn-ghost rounded-pill"
                     href="https://arxiv.org/abs/2510.16359"
                     target="_blank"
                     rel="noreferrer"
@@ -571,7 +559,7 @@
                     Read on arXiv <i class="bi bi-arrow-up-right ms-1"></i>
                   </a>
                   <a
-                    class="btn btn-outline-light rounded-pill"
+                    class="btn btn-ghost rounded-pill"
                     href="https://github.com/Utsavwh03/Counter-Vax/tree/main"
                     target="_blank"
                     rel="noreferrer"
@@ -585,7 +573,7 @@
         </div>
       </section>
 
-      <section id="skills" class="py-6">
+      <section id="skills" class="py-6 text-center">
         <div class="container-lg">
           <div class="section-heading text-center mb-5">
             <span class="badge rounded-pill text-bg-primary-subtle text-primary-emphasis mb-3">
@@ -597,42 +585,40 @@
               research-grade tools.
             </p>
           </div>
-          <div class="row g-4">
+          <div class="row g-4 justify-content-center">
             <div class="col-md-4">
               <div class="skills-card rounded-4 p-4 h-100">
                 <h3 class="h5 mb-3 text-accent text-uppercase">Core Areas</h3>
-                <ul class="list-unstyled d-grid gap-2 text-secondary mb-0">
-                  <li><i class="bi bi-caret-right-fill text-primary me-2"></i>Machine Learning &amp; Deep Learning</li>
-                  <li><i class="bi bi-caret-right-fill text-primary me-2"></i>Natural Language Processing</li>
-                  <li><i class="bi bi-caret-right-fill text-primary me-2"></i>Reinforcement Learning &amp; Agentic RL</li>
-                  <li>
-                    <i class="bi bi-caret-right-fill text-primary me-2"></i>High-Performance &amp; Distributed Computing
-                  </li>
-                  <li><i class="bi bi-caret-right-fill text-primary me-2"></i>Data Structures &amp; Algorithms</li>
-                  <li><i class="bi bi-caret-right-fill text-primary me-2"></i>Systems &amp; Socket Programming</li>
+                <ul class="fancy-list list-unstyled d-grid gap-2 text-secondary mb-0">
+                  <li>Machine Learning &amp; Deep Learning</li>
+                  <li>Natural Language Processing</li>
+                  <li>Reinforcement Learning &amp; Agentic RL</li>
+                  <li>High-Performance &amp; Distributed Computing</li>
+                  <li>Data Structures &amp; Algorithms</li>
+                  <li>Systems &amp; Socket Programming</li>
                 </ul>
               </div>
             </div>
             <div class="col-md-4">
               <div class="skills-card rounded-4 p-4 h-100">
                 <h3 class="h5 mb-3 text-accent text-uppercase">Programming Languages</h3>
-                <ul class="list-unstyled d-grid gap-2 text-secondary mb-0">
-                  <li><i class="bi bi-code-slash text-info me-2"></i>Python, C++, C</li>
-                  <li><i class="bi bi-code-slash text-info me-2"></i>SQL, Bash</li>
-                  <li><i class="bi bi-code-slash text-info me-2"></i>MIPS32 Assembly, Verilog, MATLAB</li>
-                  <li><i class="bi bi-code-slash text-info me-2"></i>HTML, CSS, LaTeX, GraphQL</li>
+                <ul class="fancy-list list-unstyled d-grid gap-2 text-secondary mb-0">
+                  <li>Python, C++, C</li>
+                  <li>SQL, Bash</li>
+                  <li>MIPS32 Assembly, Verilog, MATLAB</li>
+                  <li>HTML, CSS, LaTeX, GraphQL</li>
                 </ul>
               </div>
             </div>
             <div class="col-md-4">
               <div class="skills-card rounded-4 p-4 h-100">
                 <h3 class="h5 mb-3 text-accent text-uppercase">Frameworks &amp; Libraries</h3>
-                <ul class="list-unstyled d-grid gap-2 text-secondary mb-0">
-                  <li><i class="bi bi-stack text-success me-2"></i>PyTorch, TensorFlow, Scikit-Learn</li>
-                  <li><i class="bi bi-stack text-success me-2"></i>Hugging Face Transformers</li>
-                  <li><i class="bi bi-stack text-success me-2"></i>LangChain, LangGraph, vLLM, Verl, RLFactory</li>
-                  <li><i class="bi bi-stack text-success me-2"></i>FASTAPI, Streamlit, MCP</li>
-                  <li><i class="bi bi-stack text-success me-2"></i>AWS &amp; Cloud Tooling</li>
+                <ul class="fancy-list list-unstyled d-grid gap-2 text-secondary mb-0">
+                  <li>PyTorch, TensorFlow, Scikit-Learn</li>
+                  <li>Hugging Face Transformers</li>
+                  <li>LangChain, LangGraph, vLLM, Verl, RLFactory</li>
+                  <li>FASTAPI, Streamlit, MCP</li>
+                  <li>AWS &amp; Cloud Tooling</li>
                 </ul>
               </div>
             </div>
@@ -705,8 +691,8 @@
       </section>
     </main>
 
-    <footer class="py-4 border-0">
-      <div class="container-lg d-flex flex-column flex-lg-row justify-content-between align-items-center gap-3">
+    <footer class="py-4 border-0 text-center">
+      <div class="container-lg d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3">
         <p class="mb-0 text-secondary">
           © <span id="year"></span> Utsav Dhanuka. Crafted with Bootstrap, Jekyll-ready structure &amp; care.
         </p>
@@ -720,11 +706,7 @@
       </div>
     </footer>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-qo5d2+YQg8nH6MY9HmPNgm6kKiC9JIhbnoAVnX1nvUs61f7oOJPfm6D/EbhO6k4e"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

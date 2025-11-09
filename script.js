@@ -24,7 +24,7 @@
   };
 
   const stored = window.localStorage.getItem(storageKey);
-  applyTheme(stored || "dark");
+  applyTheme(stored || "light");
 
   if (toggle) {
     toggle.addEventListener("click", () => {
