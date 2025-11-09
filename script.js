@@ -1,44 +1,38 @@
-// Dark / light theme toggle with localStorage
+// Theme toggle with persistence & Bootstrap theme sync
 (function () {
   const body = document.body;
   const toggle = document.getElementById("themeToggle");
-  const stored = window.localStorage.getItem("utsav-theme");
+  const storageKey = "utsav-theme";
 
-  if (stored === "light") {
-    body.setAttribute("data-theme", "light");
-    if (toggle) toggle.textContent = "🌞";
-  } else {
-    body.setAttribute("data-theme", "dark");
-    if (toggle) toggle.textContent = "🌙";
-  }
+  const updateToggleUI = (theme) => {
+    if (!toggle) return;
+    const isDark = theme === "dark";
+    toggle.innerHTML = `
+      <i class="bi ${isDark ? "bi-moon-stars" : "bi-sun-fill"}"></i>
+      <span>${isDark ? "Dark" : "Light"}</span>
+    `;
+    toggle.classList.toggle("btn-outline-light", isDark);
+    toggle.classList.toggle("btn-outline-dark", !isDark);
+  };
+
+  const applyTheme = (theme) => {
+    const resolved = theme === "light" ? "light" : "dark";
+    body.setAttribute("data-theme", resolved);
+    document.documentElement.setAttribute("data-bs-theme", resolved);
+    window.localStorage.setItem(storageKey, resolved);
+    updateToggleUI(resolved);
+  };
+
+  const stored = window.localStorage.getItem(storageKey);
+  applyTheme(stored || "dark");
 
   if (toggle) {
     toggle.addEventListener("click", () => {
       const current = body.getAttribute("data-theme");
       const next = current === "dark" ? "light" : "dark";
-      body.setAttribute("data-theme", next);
-      window.localStorage.setItem("utsav-theme", next);
-      toggle.textContent = next === "dark" ? "🌙" : "🌞";
+      applyTheme(next);
     });
   }
-})();
-
-// Mobile nav toggle
-(function () {
-  const navToggle = document.getElementById("navToggle");
-  const navLinks = document.getElementById("navLinks");
-
-  if (!navToggle || !navLinks) return;
-
-  navToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("nav__links--open");
-  });
-
-  navLinks.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      navLinks.classList.remove("nav__links--open");
-    });
-  });
 })();
 
 // Footer year
