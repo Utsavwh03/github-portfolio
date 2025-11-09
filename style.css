@@ -216,14 +216,15 @@ body[data-theme="dark"] .meta-title {
 }
 
 body[data-theme="dark"] .btn-ghost {
-  border-color: rgba(148, 163, 184, 0.4);
-  background: rgba(15, 23, 42, 0.6);
-  color: var(--text-base);
+  border-color: rgba(148, 163, 184, 0.55);
+  background: rgba(148, 163, 184, 0.18);
+  color: #e2e8f0;
 }
 
 body[data-theme="dark"] .btn-ghost:hover {
-  background: rgba(148, 163, 184, 0.18);
-  color: var(--text-accent);
+  background: rgba(56, 189, 248, 0.28);
+  border-color: rgba(56, 189, 248, 0.55);
+  color: #f8fafc;
 }
 
 .section-heading .badge {
