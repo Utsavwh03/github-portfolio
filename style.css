@@ -202,10 +202,14 @@ body[data-theme="dark"] .meta-title {
 
 .btn-ghost {
   border: 1px solid rgba(15, 23, 42, 0.18);
-  color: var(--text-base);
   background: rgba(255, 255, 255, 0.62);
   transition: background var(--transition-base), border-color var(--transition-base),
     color var(--transition-base), transform var(--transition-base);
+}
+
+.btn-ghost,
+.btn-ghost i {
+  color: #111827;
 }
 
 .btn-ghost:hover {
@@ -218,6 +222,10 @@ body[data-theme="dark"] .meta-title {
 body[data-theme="dark"] .btn-ghost {
   border-color: rgba(148, 163, 184, 0.55);
   background: rgba(148, 163, 184, 0.18);
+  color: #e2e8f0;
+}
+
+body[data-theme="dark"] .btn-ghost i {
   color: #e2e8f0;
 }
 
