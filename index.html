@@ -1,13 +1,640 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Utsav Dhanuka | AI/ML Portfolio</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <title>Utsav Dhanuka | AI/ML Research & Engineering</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Portfolio of Utsav Dhanuka – AI/ML researcher and engineer, MS CS @ UMass Amherst, B.Tech CSE @ IIT Kharagpur."
+  />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
 </head>
 <body>
-  <h1>Hi, I'm Utsav 👋</h1>
-  <p>Graduate Student @ UMass Amherst | B.Tech CSE @ IIT Kharagpur</p>
-  <p>Exploring AI Safety, Reinforcement Learning, and Multimodal NLP</p>
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="#hero" class="nav__brand">
+        <span class="nav__logo-circle">U</span>
+        <span class="nav__brand-text">Utsav Dhanuka</span>
+      </a>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation">
+        ☰
+      </button>
+
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+            🌙
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="hero" class="hero">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="hero__eyebrow">AI/ML Research · Systems · Trading Agents</p>
+          <h1 class="hero__title">Hi, I'm <span>Utsav Dhanuka</span>.</h1>
+          <p class="hero__subtitle">
+            MS CS student at <strong>UMass Amherst</strong> and B.Tech in CSE from
+            <strong>IIT Kharagpur</strong>. I build multi-agent trading frameworks,
+            safer large language models, and systems that scale from GPUs to
+            distributed clusters.
+          </p>
+
+          <div class="hero__cta">
+            <a href="mailto:utsavdhanuka03@gmail.com" class="btn btn--primary">
+              ✉️ Email Me
+            </a>
+            <a
+              href="https://github.com/Utsavwh03"
+              class="btn btn--ghost"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub Profile
+            </a>
+            <a
+              href="https://www.linkedin.com/in/utsav-dhanuka-a36b14226/"
+              class="btn btn--ghost"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn
+            </a>
+          </div>
+
+          <dl class="hero__meta">
+            <div>
+              <dt>Location</dt>
+              <dd>Amherst, MA · USA</dd>
+            </div>
+            <div>
+              <dt>Current Focus</dt>
+              <dd>Agentic RL, Safer LLMs, Quant AI</dd>
+            </div>
+            <div>
+              <dt>Open To</dt>
+              <dd>Research internships, ML/SDE roles</dd>
+            </div>
+          </dl>
+        </div>
+
+        <aside class="hero__sidebar">
+          <div class="hero-card">
+            <h2>At a glance</h2>
+            <ul>
+              <li><strong>Founding Engineer</strong> – VedaQuant AI (Quant AI startup)</li>
+              <li>
+                <strong>R² 99.21</strong> &amp; <strong>MAE 0.0045</strong> for
+                Nifty 50 forecasts (15m–1d horizons)
+              </li>
+              <li>
+                <strong>Research</strong>: Safer LLMs, countering vaccine
+                misinformation, RAG in distributed settings
+              </li>
+              <li>
+                <strong>Stack</strong>: PyTorch, TensorFlow, Hugging Face, LangChain,
+                LangGraph, vLLM, AWS, FASTAPI
+              </li>
+            </ul>
+          </div>
+
+          <div class="hero-card hero-card--contact">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="tel:+14133137893">📞 +1 (413) 313-7893</a></li>
+              <li>
+                <a href="mailto:utsavdhanuka03@gmail.com">
+                  ✉️ utsavdhanuka03@gmail.com
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://arxiv.org/abs/2510.16359"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  📄 arXiv: Counter-Vaccine Tweets
+                </a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container section__inner">
+        <header class="section__header">
+          <h2>About</h2>
+          <p>
+            I like building systems that sit at the intersection of
+            <strong>machine learning</strong>, <strong>NLP</strong>, and
+            <strong>systems programming</strong> – from multi-agent trading
+            frameworks to safety-aligned LLMs and distributed RAG pipelines.
+          </p>
+        </header>
+
+        <div class="about__grid">
+          <div class="about__block">
+            <h3>Education</h3>
+
+            <article class="timeline-item">
+              <h4>University of Massachusetts, Amherst</h4>
+              <p class="timeline-item__role">
+                M.S. in Computer Science · Manning College of Information and Computer Sciences
+              </p>
+              <p class="timeline-item__meta">Sep 2025 – Present</p>
+              <p>
+                Coursework: Advanced Reinforcement Learning, Machine Learning
+                Research, Safety &amp; Agentic RL (BioNLP Lab).
+              </p>
+            </article>
+
+            <article class="timeline-item">
+              <h4>Indian Institute of Technology Kharagpur</h4>
+              <p class="timeline-item__role">
+                B.Tech in Computer Science &amp; Engineering · CGPA 8.79/10
+              </p>
+              <p class="timeline-item__meta">Dec 2021 – May 2025</p>
+              <p>
+                Coursework: Operating Systems, Computer Networks, DBMS,
+                Machine Learning, NLP, Social Computing, AI &amp; Ethics,
+                Safety for GenAI, Big Data Processing, Software Engineering.
+              </p>
+            </article>
+          </div>
+
+          <div class="about__block">
+            <h3>Current Interests</h3>
+            <ul class="pill-list">
+              <li>Multi-Agent Trading Systems</li>
+              <li>Safer &amp; Robust LLMs</li>
+              <li>Reinforcement Learning</li>
+              <li>Distributed RAG &amp; Search</li>
+              <li>NLP for Social Good</li>
+              <li>High-Performance Computing</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section section--alt">
+      <div class="container section__inner">
+        <header class="section__header">
+          <h2>Experience</h2>
+        </header>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-item__header">
+              <h3>Founding Engineer – VedaQuant AI (Stealth)</h3>
+              <span class="timeline-item__meta">
+                Kolkata, India · May 2025 – Present
+              </span>
+            </div>
+            <p class="timeline-item__tagline">
+              Building a multi-agent trading framework that mirrors real trading desks.
+            </p>
+            <ul>
+              <li>
+                Achieved <strong>R² of 99.21</strong> and <strong>MAE 0.0045</strong>
+                in real-time Nifty 50 forecasting with LSTM, BiLSTM-Attention,
+                GRU, and Transformer models across 15-minute, 30-minute, and
+                1-day horizons.
+              </li>
+              <li>
+                Integrated FinBERT-based sentiment over <strong>5,000+ daily
+                global financial news sources</strong>, improving predictive
+                performance by 7–10% across horizons.
+              </li>
+              <li>
+                Designing a multi-agent AI framework delegating technical,
+                fundamental, sentiment, and macroeconomic analysis to specialized
+                agents, aggregating signals into trading strategies.
+              </li>
+            </ul>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-item__header">
+              <h3>Research & Development Intern – Samsung Research Institute</h3>
+              <span class="timeline-item__meta">
+                Noida, India · May 2024 – Aug 2024
+              </span>
+            </div>
+            <p class="timeline-item__tagline">
+              OCR &amp; document understanding for large-scale medical records.
+            </p>
+            <ul>
+              <li>
+                Built a system to digitize <strong>1,000+ physical medical documents</strong>
+                using advanced OCR pipelines and OpenCV preprocessing.
+              </li>
+              <li>
+                Leveraged MLKit OCR for text recognition and designed a parser
+                that converts raw OCR output into structured JSON with medical fields.
+              </li>
+              <li>
+                Integrated and fine-tuned PaddleOCR within Samsung’s Android
+                stack, achieving <strong>89% text detection accuracy</strong>.
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="container section__inner">
+        <header class="section__header">
+          <h2>Selected Projects</h2>
+          <p>
+            A mix of research, systems, and production-style implementations.
+            Each project links to the corresponding code or paper.
+          </p>
+        </header>
+
+        <div class="projects-grid">
+          <!-- Safer LLMs -->
+          <article class="project-card">
+            <header>
+              <h3>Developing &amp; Evaluating Safer Large Language Models</h3>
+              <p class="project-card__meta">
+                Safety Fundamentals for Gen AI · Feb 2025 – Apr 2025
+              </p>
+            </header>
+            <p>
+              Implemented RLHF and DPO pipelines using <strong>bert-base-uncased</strong>
+              for reward modeling and <strong>gpt2-medium</strong> for safe response
+              generation, targeting harmful prompts.
+            </p>
+            <ul class="project-card__bullets">
+              <li>
+                Applied safety decoding (RESTA &amp; DARE) on <strong>Gemma-2</strong> variants
+                combining SFT, delta pruning, and safety vector addition.
+              </li>
+              <li>
+                Evaluated safety vs. utility; reduced LLM unsafety score from
+                <strong>0.5663 → 0.3982</strong> under PEFT and full fine-tuning regimes.
+              </li>
+            </ul>
+            <div class="project-card__tags">
+              <span>RLHF</span><span>DPO</span><span>Safety</span><span>PyTorch</span>
+            </div>
+            <div class="project-card__links">
+              <a
+                href="https://github.com/Utsav03wh/Safety-LLM/tree/main"
+                target="_blank"
+                rel="noreferrer"
+              >
+                View Code ↗
+              </a>
+            </div>
+          </article>
+
+          <!-- Counter Vaccine -->
+          <article class="project-card">
+            <header>
+              <h3>Counter-Arguments to Anti-Vaccine Tweets</h3>
+              <p class="project-card__meta">
+                B.Tech Thesis · Aug 2024 – Present
+              </p>
+            </header>
+            <p>
+              Pipeline for generating counter-arguments to vaccine misinformation
+              using small language models fine-tuned on GPT-generated and
+              label-aware data.
+            </p>
+            <ul class="project-card__bullets">
+              <li>
+                Fine-tuned <strong>LLaMA</strong> and <strong>Gemma</strong> models on
+                GPT-generated data with contextual label descriptions.
+              </li>
+              <li>
+                Ran human evaluation with pro- and anti-vaccine annotators;
+                combined results via vote interpolation for robust analysis.
+              </li>
+              <li>
+                Achieved <strong>ROUGE-L = 0.304</strong> and
+                <strong>BERTScore F1 = 0.895</strong>, closely matching GPT-4o
+                quality with more efficient models.
+              </li>
+            </ul>
+            <div class="project-card__tags">
+              <span>NLP</span><span>Argument Generation</span><span>LLMs</span>
+            </div>
+            <div class="project-card__links">
+              <a
+                href="https://github.com/Utsavwh03/Counter-Vax/tree/main"
+                target="_blank"
+                rel="noreferrer"
+              >
+                View Code ↗
+              </a>
+              <a
+                href="https://arxiv.org/abs/2510.16359"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Read Paper ↗
+              </a>
+            </div>
+          </article>
+
+          <!-- RAG + Hadoop -->
+          <article class="project-card">
+            <header>
+              <h3>RAG with Hadoop for Chain-of-Thought LLMs</h3>
+              <p class="project-card__meta">
+                DBMS Lab · Feb 2024 – Apr 2024
+              </p>
+            </header>
+            <p>
+              Built a distributed RAG pipeline with Hadoop, Solr, and Zookeeper
+              to support chain-of-thought queries over a knowledge graph, plugged
+              into Gemini via LangChain.
+            </p>
+            <ul class="project-card__bullets">
+              <li>
+                Deployed Solr/Zookeeper as indexers for large-scale structured data.
+              </li>
+              <li>
+                Integrated LangChain and monitored performance with
+                <strong>Prometheus</strong> and <strong>Grafana</strong>.
+              </li>
+              <li>
+                Used Hadoop MapReduce for scalable retrieval and Apache Solr for
+                fast search.
+              </li>
+            </ul>
+            <div class="project-card__tags">
+              <span>RAG</span><span>Hadoop</span><span>Solr</span><span>LangChain</span>
+            </div>
+            <div class="project-card__links">
+              <a
+                href="https://github.com/Utsav03wh/DBMS-Laboratory-Spr-24/tree/main/A5"
+                target="_blank"
+                rel="noreferrer"
+              >
+                View Code ↗
+              </a>
+            </div>
+          </article>
+
+          <!-- Reliable UDP -->
+          <article class="project-card">
+            <header>
+              <h3>Reliable UDP &amp; Concurrent Mail Server</h3>
+              <p class="project-card__meta">
+                Computer Networks Lab · Mar 2024 – Aug 2024
+              </p>
+            </header>
+            <p>
+              A modified transport protocol (MTP) built on top of UDP in C,
+              delivering TCP-like reliability along with a concurrent mail
+              server/client.
+            </p>
+            <ul class="project-card__bullets">
+              <li>
+                Multi-threaded architecture with shared memory to support
+                <strong>25+ simultaneous MTP sockets</strong>.
+              </li>
+              <li>
+                Evaluated resilience under <strong>up to 50% simulated packet loss</strong>,
+                guaranteeing successful message delivery.
+              </li>
+              <li>
+                TCP-based concurrent mail server using SMTP/POP3 for efficient
+                email transmission.
+              </li>
+            </ul>
+            <div class="project-card__tags">
+              <span>C</span><span>Networking</span><span>Systems</span>
+            </div>
+            <div class="project-card__links">
+              <a
+                href="https://github.com/Utsavwh03/Reliable-UDP"
+                target="_blank"
+                rel="noreferrer"
+              >
+                View Code ↗
+              </a>
+            </div>
+          </article>
+
+          <!-- Virtual Memory -->
+          <article class="project-card">
+            <header>
+              <h3>Virtual Memory Simulation with Paging</h3>
+              <p class="project-card__meta">
+                Operating Systems Lab · Mar 2024 – Aug 2024
+              </p>
+            </header>
+            <p>
+              A virtual memory system in C simulating OS-style memory management
+              (allocation, deallocation, scheduling) for multiple concurrent processes.
+            </p>
+            <ul class="project-card__bullets">
+              <li>
+                Implemented an MMU with virtual-to-physical translation, page
+                fault handling, and LRU replacement.
+              </li>
+              <li>
+                Designed a process scheduler for fair, realistic execution flow.
+              </li>
+            </ul>
+            <div class="project-card__tags">
+              <span>C</span><span>Operating Systems</span><span>Simulation</span>
+            </div>
+            <div class="project-card__links">
+              <a
+                href="https://github.com/Utsavwh03/Virtual-Memory"
+                target="_blank"
+                rel="noreferrer"
+              >
+                View Code ↗
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section id="publications" class="section section--alt">
+      <div class="container section__inner">
+        <header class="section__header">
+          <h2>Publications</h2>
+        </header>
+
+        <article class="pub-card">
+          <h3>
+            Utilising Large Language Models for Generating Effective Counter-Arguments
+            to Anti-Vaccine Tweets
+          </h3>
+          <p class="pub-card__authors">
+            <strong>U. Dhanuka</strong>, S. Poddar, S. Ghosh
+          </p>
+          <p class="pub-card__venue">
+            arXiv preprint · 2025
+          </p>
+          <p>
+            Explores how LLMs can be used to generate persuasive, context-aware
+            counter-arguments for anti-vaccine content, with careful human and
+            automatic evaluation of quality and safety.
+          </p>
+          <div class="pub-card__links">
+            <a
+              href="https://arxiv.org/abs/2510.16359"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Read on arXiv ↗
+            </a>
+            <a
+              href="https://github.com/Utsavwh03/Counter-Vax/tree/main"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Project Code ↗
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="container section__inner">
+        <header class="section__header">
+          <h2>Skills</h2>
+          <p>
+            I enjoy combining statistical learning, deep learning, and systems
+            programming to build practical, research-grade tools.
+          </p>
+        </header>
+
+        <div class="skills-grid">
+          <div class="skills-group">
+            <h3>Core Areas</h3>
+            <ul>
+              <li>Machine Learning &amp; Deep Learning</li>
+              <li>Natural Language Processing</li>
+              <li>Reinforcement Learning &amp; Agentic RL</li>
+              <li>High-Performance &amp; Distributed Computing</li>
+              <li>Data Structures &amp; Algorithms</li>
+              <li>Systems &amp; Socket Programming</li>
+            </ul>
+          </div>
+
+          <div class="skills-group">
+            <h3>Programming Languages</h3>
+            <ul>
+              <li>Python, C++, C</li>
+              <li>SQL, Bash</li>
+              <li>MIPS32 Assembly, Verilog, MATLAB</li>
+              <li>HTML, CSS, LaTeX, GraphQL</li>
+            </ul>
+          </div>
+
+          <div class="skills-group">
+            <h3>Frameworks &amp; Libraries</h3>
+            <ul>
+              <li>PyTorch, TensorFlow, Scikit-Learn</li>
+              <li>Hugging Face Transformers</li>
+              <li>LangChain, LangGraph, vLLM, Verl, RLFactory</li>
+              <li>FASTAPI, Streamlit, MCP</li>
+              <li>AWS &amp; Cloud Tooling</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section section--alt">
+      <div class="container section__inner section__inner--narrow">
+        <header class="section__header">
+          <h2>Contact</h2>
+          <p>
+            Whether it’s research collaboration, quant/ML roles, or open-source
+            projects, I’m happy to chat.
+          </p>
+        </header>
+
+        <div class="contact-card">
+          <ul>
+            <li>
+              📧 Email:
+              <a href="mailto:utsavdhanuka03@gmail.com">
+                utsavdhanuka03@gmail.com
+              </a>
+            </li>
+            <li>
+              💼 LinkedIn:
+              <a
+                href="https://www.linkedin.com/in/utsav-dhanuka-a36b14226/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                utsav-dhanuka
+              </a>
+            </li>
+            <li>
+              💻 GitHub:
+              <a
+                href="https://github.com/Utsavwh03"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Utsavwh03
+              </a>
+            </li>
+            <li>
+              📱 Phone:
+              <a href="tel:+14133137893">+1 (413) 313-7893</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>© <span id="year"></span> Utsav Dhanuka. Built with HTML, CSS &amp; a bit of JS.</p>
+      <p>
+        Hosted on
+        <a href="https://pages.github.com/" target="_blank" rel="noreferrer">
+          GitHub Pages
+        </a>
+        .
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
