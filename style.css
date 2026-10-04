@@ -219,18 +219,6 @@ nav {
   align-items: center;
 }
 
-.portrait {
-  display: block;
-  width: clamp(96px, 12vw, 128px);
-  height: clamp(96px, 12vw, 128px);
-  object-fit: cover;
-  object-position: 50% 30%;
-  border-radius: 50%;
-  border: 1px solid var(--rule);
-  box-shadow: 0 0 0 4px var(--paper), 0 0 0 5px var(--rule);
-  margin-bottom: 1.6rem;
-}
-
 .name {
   font-size: clamp(2.8rem, 7.2vw, 5.4rem);
   font-weight: 800;
@@ -306,52 +294,23 @@ nav {
   color: var(--paper);
 }
 
-/* The experiment chamber */
-.experiment {
+/* Hero portrait */
+.portrait {
   margin: 0;
-  background-color: var(--panel);
-  background-image: linear-gradient(var(--grid) 1px, transparent 1px),
-    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
-  background-size: 24px 24px;
-  border: 1px solid var(--rule);
-  border-radius: 14px;
-  overflow: hidden;
+  justify-self: center;
+  width: min(100%, 380px);
 }
 
-.experiment canvas {
+.portrait img {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 10;
-}
-
-.experiment figcaption {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 0.8rem 1rem;
-  border-top: 1px solid var(--rule);
-  font-size: 0.9rem;
-  color: var(--graphite);
-  background: var(--panel);
-}
-
-.replay {
-  flex-shrink: 0;
-  font-family: var(--display);
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--cobalt);
-  background: var(--cobalt-soft);
-  border: 0;
-  border-radius: 999px;
-  padding: 0.35rem 0.85rem;
-  cursor: pointer;
-}
-
-.replay:hover {
-  background: var(--cobalt);
-  color: var(--panel);
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: 50% 25%;
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+  box-shadow: 0 0 0 6px var(--panel), 0 0 0 7px var(--rule);
 }
 
 /* Sections ---------------------------------------------------------- */
@@ -733,6 +692,11 @@ nav {
     grid-template-columns: 1fr;
   }
 
+  .portrait {
+    justify-self: start;
+    width: min(100%, 300px);
+  }
+
   .split {
     grid-template-columns: 1fr;
     gap: 1.25rem;
@@ -767,10 +731,6 @@ nav {
     min-height: 0;
   }
 
-  .experiment figcaption {
-    flex-direction: column;
-    align-items: flex-start;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -778,8 +738,7 @@ nav {
     scroll-behavior: auto;
   }
 
-  .btn,
-  .replay {
+  .btn {
     transition: none;
   }
 }
