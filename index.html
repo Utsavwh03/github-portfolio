@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <title>Utsav Dhanuka | Reinforcement learning and LLM agents</title>
+    <title>Utsav Dhanuka | Reinforcement learning research</title>
     <meta
       name="description"
-      content="Utsav Dhanuka: graduate researcher in the SCALAR Lab at UMass Amherst working on reinforcement learning, post-training, and agents that learn from experience."
+      content="Utsav Dhanuka: graduate researcher in the SCALAR Lab at UMass Amherst working on deep reinforcement learning, LLM post-training, continual and meta-learning, robotics, and world models."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -55,8 +55,8 @@
             <p class="intro">
               I'm a graduate researcher in the
               SCALAR Lab at UMass
-              Amherst, advised by Prof. Scott Niekum. I work on reinforcement learning and post-training for LLM
-              agents: how agents explore, run experiments, and turn what they learn into skills that transfer.
+              Amherst, advised by Prof. Scott Niekum. I work on deep reinforcement learning for language models and robots:
+              post-training, continual and meta-learning, world models, and scaling RL toward generalist agents.
             </p>
             <p class="status">
               MS in Computer Science, UMass Amherst, graduating May 2027. Open to full-time roles in RL,
@@ -75,7 +75,7 @@
             <canvas id="experimentCanvas" role="img"
               aria-label="Animated diagram: a projectile is launched five times. The first lands past the target, the second short of it, and each later attempt bisects the gap until the fifth lands on the target."></canvas>
             <figcaption id="experiment-caption">
-              <span>Overshoot, undershoot, bisect, commit. The experiment loop my research teaches agents to run and reuse.</span>
+              <span>Overshoot, undershoot, bisect, commit. Learning from trial and error, in miniature.</span>
               <button id="replayBtn" class="replay" type="button">Replay</button>
             </figcaption>
           </figure>
@@ -88,38 +88,46 @@
           <h2 class="section-title">Research</h2>
           <div class="section-body">
             <p class="lede">
-              Foundation models know a lot about the world, but knowing the laws of physics doesn't solve an
-              experimental physics problem. In new environments, the right strategy has to be discovered through
-              interaction. I study what makes that kind of learning efficient and scalable.
+              I'm interested in reinforcement learning as the route to agents that keep getting better from their own
+              experience, whether that agent is a language model, a robot, or something in between. My work spans the
+              methods that make this possible: how agents are trained after pretraining, how they explore, how they
+              adapt to new tasks, and how they keep learning without forgetting.
             </p>
 
             <div class="directions">
               <article class="direction">
-                <h3>Learning from experimentation</h3>
+                <h3>RL and post-training for LLMs</h3>
                 <p>
-                  Agents that design experiments, test hypotheses, and distill interaction experience into reusable,
-                  composable skills that transfer across tasks.
+                  Post-training approaches such as RLHF, preference optimization, and RL with verifiable rewards;
+                  RL pretraining objectives; and using RL to improve reasoning and tool-using agents.
                 </p>
               </article>
               <article class="direction">
-                <h3>From in-context to parametric learning</h3>
+                <h3>Continual and meta-learning</h3>
                 <p>
-                  Consolidating skills discovered at test time into model weights through RL post-training and
-                  continual learning, so agents keep improving without forgetting.
+                  Agents that adapt quickly and keep learning over time: meta-learning and in-context RL, plasticity
+                  and forgetting, and consolidating what is learned at test time into model weights.
                 </p>
               </article>
               <article class="direction">
-                <h3>Exploration with foundation-model priors</h3>
+                <h3>Deep RL for robotics and world models</h3>
                 <p>
-                  Using what pretrained models already know to guide exploration in complex environments, together with
-                  unsupervised RL objectives that don't depend on hand-designed rewards.
+                  Learning control from interaction, world models that let agents plan and practice in imagination,
+                  and bringing large pretrained models into embodied decision-making.
+                </p>
+              </article>
+              <article class="direction">
+                <h3>Exploration and scaling RL</h3>
+                <p>
+                  Scaling RL toward generalist agents: exploration guided by foundation-model priors, unsupervised and
+                  self-supervised RL objectives, and the representations and value functions that let RL scale.
                 </p>
               </article>
             </div>
 
             <p class="aside">
-              More broadly, I'm interested in scaling RL for generalist agents across language, embodied, and robotic
-              settings, and in keeping self-improving agents safe and aligned.
+              Across all of these, I care about building self-improving agents that stay safe and aligned as they
+              learn.
             </p>
           </div>
         </div>
