@@ -298,16 +298,16 @@ nav {
 .portrait {
   margin: 0;
   justify-self: center;
-  width: min(100%, 380px);
+  width: min(100%, 280px);
 }
 
 .portrait img {
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
-  object-position: 50% 25%;
+  object-position: 50% 20%;
   border: 1px solid var(--rule);
   border-radius: 14px;
   box-shadow: 0 0 0 6px var(--panel), 0 0 0 7px var(--rule);
@@ -694,7 +694,7 @@ nav {
 
   .portrait {
     justify-self: start;
-    width: min(100%, 300px);
+    width: min(100%, 220px);
   }
 
   .split {
