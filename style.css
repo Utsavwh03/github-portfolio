@@ -219,6 +219,18 @@ nav {
   align-items: center;
 }
 
+.portrait {
+  display: block;
+  width: clamp(96px, 12vw, 128px);
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: 50% 30%;
+  border-radius: 50%;
+  border: 1px solid var(--rule);
+  box-shadow: 0 0 0 4px var(--paper), 0 0 0 5px var(--rule);
+  margin-bottom: 1.6rem;
+}
+
 .name {
   font-size: clamp(2.8rem, 7.2vw, 5.4rem);
   font-weight: 800;
