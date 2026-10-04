@@ -2,649 +2,364 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Utsav Dhanuka | AI/ML Research & Engineering</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Utsav Dhanuka | Reinforcement learning and LLM agents</title>
     <meta
       name="description"
-      content="Portfolio of Utsav Dhanuka – AI/ML researcher and engineer, MS CS @ UMass Amherst, B.Tech CSE @ IIT Kharagpur."
+      content="Utsav Dhanuka: graduate researcher in the SCALAR Lab at UMass Amherst working on reinforcement learning, post-training, and agents that learn from experience."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..600;1,8..60,400&display=swap"
       rel="stylesheet"
-    />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-      integrity="sha384-oS17QsD7MAoXI7UJ2en5fsVdI3G0Swvtgkt+GapUY0D3ZiOJAzZAf06sp7Jc0z9S"
-      crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
+    <script>
+      // Apply the saved theme before first paint to avoid a flash.
+      try {
+        var t = localStorage.getItem("utsav-theme");
+        if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    </script>
   </head>
-  <body data-theme="light">
-    <header class="glass-nav">
-      <nav class="navbar navbar-expand-lg container-lg px-3 justify-content-center">
-        <a class="navbar-brand d-flex align-items-center gap-2" href="#hero">
-          <span class="brand-avatar">U</span>
-          <span class="fw-semibold">Utsav Dhanuka</span>
-        </a>
-        <button
-          class="navbar-toggler ms-auto"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#primaryNav"
-          aria-controls="primaryNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-lg-center" id="primaryNav">
-          <ul class="navbar-nav align-items-lg-center text-center gap-lg-3">
-            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-            <li class="nav-item">
-              <a class="nav-link" href="#experience">Experience</a>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-            <li class="nav-item">
-              <a class="nav-link" href="#publications">Publications</a>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-            <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
-              <button
-                id="themeToggle"
-                class="btn btn-outline-dark btn-sm rounded-pill d-flex align-items-center gap-2 mx-auto"
-                type="button"
-                aria-label="Toggle theme"
-              >
-                <i class="bi bi-sun-fill"></i>
-                <span>Light</span>
-              </button>
-            </li>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header class="topbar">
+      <div class="wrap topbar-inner">
+        <a class="wordmark" href="#top">Utsav Dhanuka</a>
+        <nav aria-label="Primary">
+          <ul class="nav">
+            <li><a href="#research">Research</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
-        </div>
-      </nav>
+        </nav>
+        <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch color theme">
+          <span class="theme-toggle-dot" aria-hidden="true"></span>
+          <span class="theme-toggle-label">Dark</span>
+        </button>
+      </div>
     </header>
 
-    <main>
-      <section id="hero" class="section-hero position-relative overflow-hidden text-center">
-        <div class="hero-gradient rounded-4"></div>
-        <div class="container-lg position-relative py-6">
-          <div class="row g-5 justify-content-center">
-            <div class="col-xl-8">
-              <div class="text-uppercase text-accent fw-semibold mb-3 small tracking-wide">
-                AI/ML Research · Systems · Trading Agents
+    <main id="main">
+      <!-- Hero -->
+      <section id="top" class="hero">
+        <div class="wrap hero-grid">
+          <div class="hero-text">
+            <h1 class="name">Utsav Dhanuka</h1>
+            <p class="tagline">I build agents that learn from their own experience.</p>
+            <p class="intro">
+              I'm a graduate researcher in the
+              SCALAR Lab at UMass
+              Amherst, advised by Prof. Scott Niekum. I work on reinforcement learning and post-training for LLM
+              agents: how agents explore, run experiments, and turn what they learn into skills that transfer.
+            </p>
+            <p class="status">
+              MS in Computer Science, UMass Amherst, graduating May 2027. Open to full-time roles in RL,
+              post-training, and applied science.
+            </p>
+            <div class="actions">
+              <a class="btn btn-primary" href="mailto:utsavdhanuka03@gmail.com">Email me</a>
+              <!-- Add your CV PDF to the repo with this file name, or change the link. -->
+              <a class="btn" href="Utsav_Dhanuka_CV.pdf" target="_blank" rel="noreferrer">CV</a>
+              <a class="btn" href="https://github.com/Utsavwh03" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="btn" href="https://www.linkedin.com/in/utsav-dhanuka-a36b14226/" target="_blank" rel="noreferrer">LinkedIn</a>
+            </div>
+          </div>
+
+          <figure class="experiment" aria-labelledby="experiment-caption">
+            <canvas id="experimentCanvas" role="img"
+              aria-label="Animated diagram: a projectile is launched five times. The first lands past the target, the second short of it, and each later attempt bisects the gap until the fifth lands on the target."></canvas>
+            <figcaption id="experiment-caption">
+              <span>Overshoot, undershoot, bisect, commit. The experiment loop my research teaches agents to run and reuse.</span>
+              <button id="replayBtn" class="replay" type="button">Replay</button>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Research interests -->
+      <section id="research" class="section">
+        <div class="wrap split">
+          <h2 class="section-title">Research</h2>
+          <div class="section-body">
+            <p class="lede">
+              Foundation models know a lot about the world, but knowing the laws of physics doesn't solve an
+              experimental physics problem. In new environments, the right strategy has to be discovered through
+              interaction. I study what makes that kind of learning efficient and scalable.
+            </p>
+
+            <div class="directions">
+              <article class="direction">
+                <h3>Learning from experimentation</h3>
+                <p>
+                  Agents that design experiments, test hypotheses, and distill interaction experience into reusable,
+                  composable skills that transfer across tasks.
+                </p>
+              </article>
+              <article class="direction">
+                <h3>From in-context to parametric learning</h3>
+                <p>
+                  Consolidating skills discovered at test time into model weights through RL post-training and
+                  continual learning, so agents keep improving without forgetting.
+                </p>
+              </article>
+              <article class="direction">
+                <h3>Exploration with foundation-model priors</h3>
+                <p>
+                  Using what pretrained models already know to guide exploration in complex environments, together with
+                  unsupervised RL objectives that don't depend on hand-designed rewards.
+                </p>
+              </article>
+            </div>
+
+            <p class="aside">
+              More broadly, I'm interested in scaling RL for generalist agents across language, embodied, and robotic
+              settings, and in keeping self-improving agents safe and aligned.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Now -->
+      <section id="now" class="section section-tint">
+        <div class="wrap split">
+          <h2 class="section-title">Now</h2>
+          <div class="section-body">
+            <div class="role">
+              <div class="role-head">
+                <h3>Graduate Researcher, SCALAR Lab</h3>
+                <p class="role-meta">UMass Amherst, advised by Prof. Scott Niekum<br />Jan 2026 to present</p>
               </div>
-              <h1 class="display-4 fw-bold mb-4">
-                Hi, I'm <span class="text-gradient">Utsav Dhanuka</span>
-              </h1>
-              <p class="lead text-secondary mb-4">
-                MS CS student at <strong>UMass Amherst</strong> and B.Tech in CSE from <strong>IIT Kharagpur</strong>. I develop agentic reinforcement learning and multimodal reasoning systems that integrate language, vision, and action.
-                 My work focuses on building interpretable, safety-aligned AI agents and scalable training frameworks that bridge perception, decision-making, and real-world interaction.
+              <p>My work here started with HExA and continues in two directions:</p>
+              <ul class="plain">
+                <li>
+                  <strong>Gradient-based follow-ups to HExA.</strong> Moving skills that agents discover in context
+                  into the model's weights with RL post-training, and studying what is kept and what is forgotten.
+                </li>
+                <li>
+                  <strong>Foundation-model priors for exploration.</strong> Using pretrained models to propose where
+                  to explore in hard environments, paired with unsupervised RL objectives.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Publications -->
+      <section id="publications" class="section">
+        <div class="wrap split">
+          <h2 class="section-title">Publications</h2>
+          <div class="section-body">
+            <article class="paper paper-featured">
+              <h3 class="paper-title">Hierarchical Experimentalist Agents</h3>
+              <!-- Check this author list against the latest arXiv version before publishing. -->
+              <p class="authors">
+                Abhranil Chandra, <span class="me">Utsav Dhanuka</span>, S. Vaidyanathan, V. Gandhi, Scott Niekum
               </p>
-              <div class="d-flex flex-wrap gap-3 mb-4">
-                <a
-                  class="btn btn-primary btn-lg rounded-pill px-4"
-                  href="mailto:utsavdhanuka03@gmail.com"
-                >
-                  <i class="bi bi-envelope-fill me-2"></i>Email Me
-                </a>
-                <a
-                  class="btn btn-ghost btn-lg rounded-pill px-4"
-                  href="https://github.com/Utsavwh03"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <i class="bi bi-github me-2"></i>GitHub Profile
-                </a>
-                <a
-                  class="btn btn-ghost btn-lg rounded-pill px-4"
-                  href="https://www.linkedin.com/in/utsav-dhanuka-a36b14226/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <i class="bi bi-linkedin me-2"></i>LinkedIn
-                </a>
-              </div>
-              <div class="row row-cols-1 row-cols-md-3 g-3 hero-meta justify-content-center">
-                <div class="col">
-                  <div class="meta-card py-3 px-3 h-100 rounded-4">
-                    <div class="meta-title">Location</div>
-                    <div class="meta-value">Amherst, MA · USA</div>
-                  </div>
+              <ul class="venues">
+                <li>RL Beyond Rewards Workshop, RLC 2026</li>
+                <li>PTA Workshop, NeurIPS 2026</li>
+                <li>Meta Agents Workshop, NeurIPS 2026</li>
+                <li class="venue-pending">Under review, ICLR 2027</li>
+              </ul>
+              <p>
+                HExA is an in-context RL framework in which a frozen LLM learns through active experimentation. An
+                actor designs experiments, an evolver distills successful and failed trajectories into a skill bank of
+                strategies and recurring mistakes, and a retriever feeds relevant skills into future episodes. No
+                weights change. We also introduce Interphyre, a benchmark of interactive physics tasks where frontier
+                models score 0% zero-shot.
+              </p>
+
+              <div class="results" aria-label="Key results">
+                <div class="result">
+                  <p class="result-label">Hardest Interphyre task, held-out seeds (Claude Sonnet 4.6)</p>
+                  <div class="bar-row"><span class="bar-name">ReAct</span><span class="bar"><span class="fill fill-base" style="--v: 11%"></span></span><span class="bar-val">11%</span></div>
+                  <div class="bar-row"><span class="bar-name">HExA</span><span class="bar"><span class="fill" style="--v: 83%"></span></span><span class="bar-val">83%</span></div>
                 </div>
-                <div class="col">
-                  <div class="meta-card py-3 px-3 h-100 rounded-4">
-                    <div class="meta-title">Current Focus</div>
-                    <div class="meta-value">Agentic RL, Safer LLMs, Quant AI</div>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="meta-card py-3 px-3 h-100 rounded-4">
-                    <div class="meta-title">Open To</div>
-                    <div class="meta-value">Research internships, ML/SDE roles</div>
-                  </div>
+                <div class="result">
+                  <p class="result-label">Zero-shot transfer from easier levels to the same task</p>
+                  <div class="bar-row"><span class="bar-name">ReAct</span><span class="bar"><span class="fill fill-base" style="--v: 11%"></span></span><span class="bar-val">11%</span></div>
+                  <div class="bar-row"><span class="bar-name">HExA</span><span class="bar"><span class="fill" style="--v: 44%"></span></span><span class="bar-val">44%</span></div>
                 </div>
               </div>
-            </div>
-            <div class="col-xl-7">
-              <div class="glass-card rounded-4 p-4 mb-4 shadow-lg text-start text-md-center">
-                <h2 class="h5 text-uppercase text-accent mb-3">At a glance</h2>
-                <p class="text-secondary mb-3">
-                  Hi, I’m <strong>Utsav Dhanuka</strong>, an MS Computer Science student at <strong>UMass Amherst</strong>
-                  and a B.Tech graduate in CSE from <strong>IIT Kharagpur</strong>. I’m a graduate researcher at the
-                  <strong>BioNLP Lab</strong>, where I develop agentic reinforcement learning systems and multimodal
-                  reasoning models that enable AI to perceive, plan, and act in complex, real-world settings.
-                </p>
-                <p class="text-secondary mb-3">
-                  Previously, at <strong>Veda Quant AI</strong>, I built multi-agent trading frameworks that applied
-                  reinforcement learning and adaptive decision-making to financial markets—work that deepened my interest
-                  in the intersection of intelligent agents, reasoning, and real-world optimization.
-                </p>
-                <p class="text-secondary mb-3">
-                  My current research explores how reinforcement learning, process supervision, and visual grounding can
-                  be combined to enhance interactive multimodal agents capable of tool use, curiosity-driven exploration,
-                  and compositional reasoning.
-                </p>
-                <p class="text-secondary mb-0">
-                  Broadly, I’m passionate about creating safer, interpretable, and autonomous AI systems that bridge the
-                  gap between language, perception, and action.
-                </p>
-              </div>
-            </div>
+              <p class="paper-note">Evaluated across 17 tasks spanning physics reasoning, interactive games, multi-step reasoning, and physics-law discovery.</p>
+              <!-- Add the arXiv link once the new version is live:
+              <p class="links"><a href="https://arxiv.org/abs/XXXX.XXXXX" target="_blank" rel="noreferrer">Paper</a></p>
+              -->
+            </article>
+
+            <article class="paper">
+              <h3 class="paper-title">Utilising Large Language Models for Generating Effective Counter-Arguments to Anti-Vaccine Tweets</h3>
+              <p class="authors"><span class="me">Utsav Dhanuka</span>, S. Poddar, S. Ghosh</p>
+              <ul class="venues"><li>arXiv preprint, 2025</li></ul>
+              <p>
+                Generates context-aware counter-arguments to vaccine misinformation with fine-tuned LLaMA and Gemma
+                models, evaluated with automatic metrics and human annotators on both sides of the debate.
+              </p>
+              <p class="links">
+                <a href="https://arxiv.org/abs/2510.16359" target="_blank" rel="noreferrer">Paper</a>
+                <a href="https://github.com/Utsavwh03/Counter-Vax/tree/main" target="_blank" rel="noreferrer">Code</a>
+              </p>
+            </article>
           </div>
         </div>
       </section>
 
-      <section id="about" class="py-6 text-center">
-        <div class="container-lg">
-          <div class="row g-5 justify-content-center">
-            <div class="col-xl-9">
-              <div class="section-heading">
-                <span class="badge rounded-pill text-bg-primary-subtle text-primary-emphasis mb-3">
-                  About
-                </span>
-                <h2 class="h1 fw-semibold mb-3">Designing scalable, safe, and agentic AI systems.</h2>
-                <p class="text-secondary">
-                  I like building systems that sit at the intersection of <strong>machine learning</strong>,
-                  <strong>NLP</strong>, and <strong>systems programming</strong> – from multi-agent trading frameworks
-                  to safety-aligned LLMs and distributed RAG pipelines.
-                </p>
-              </div>
-              <div class="timeline mt-4">
-                <div class="timeline-item">
-                  <div class="timeline-content">
-                    <h3 class="h5 mb-1">University of Massachusetts, Amherst</h3>
-                    <p class="text-accent small mb-1">
-                      M.S. in Computer Science · Manning College of Information and Computer Sciences
-                    </p>
-                    <div class="text-secondary small">Sep 2025 – Present</div>
-                    <p class="mb-0 mt-2 text-secondary">
-                      Coursework: Advanced Reinforcement Learning, Machine Learning Research, Safety &amp; Agentic RL
-                      (BioNLP Lab).
-                    </p>
-                  </div>
+      <!-- Experience -->
+      <section id="experience" class="section section-tint">
+        <div class="wrap split">
+          <h2 class="section-title">Experience</h2>
+          <div class="section-body">
+            <ol class="timeline">
+              <li class="role">
+                <div class="role-head">
+                  <h3>ML Research Intern, Physical AI</h3>
+                  <p class="role-meta">Keysight Technologies, Software and AI Labs, California<br />Jun 2026 to Aug 2026</p>
                 </div>
-                <div class="timeline-item">
-                  <div class="timeline-dot"></div>
-                  <div class="timeline-content">
-                    <h3 class="h5 mb-1">Indian Institute of Technology Kharagpur</h3>
-                    <p class="text-accent small mb-1">
-                      B.Tech in Computer Science &amp; Engineering · CGPA 8.79/10
-                    </p>
-                    <div class="text-secondary small">Dec 2021 – May 2025</div>
-                    <p class="mb-0 mt-2 text-secondary">
-                      Coursework: Operating Systems, Computer Networks, DBMS, Machine Learning, NLP, Social Computing,
-                      AI &amp; Ethics, Safety for GenAI, Big Data Processing, Software Engineering.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="experience" class="py-6 bg-soft text-center">
-        <div class="container-lg">
-          <div class="section-heading text-center mb-5">
-            <span class="badge rounded-pill text-bg-primary-subtle text-primary-emphasis mb-3">
-              Experience
-            </span>
-            <h2 class="h1 fw-semibold">Leading in research, product & systems</h2>
-          </div>
-          <div class="row g-4 justify-content-center">
-            <div class="col-lg-6">
-              <div class="experience-card rounded-4 p-4 h-100">
-                <div class="d-flex flex-column gap-3 align-items-center mb-3">
-                  <div>
-                    <h3 class="h5 mb-1">Founding Engineer – VedaQuant AI (Stealth)</h3>
-                    <div class="text-secondary small">Kolkata, India · May 2025 – Present</div>
-                  </div>
-                  <span class="badge rounded-pill text-bg-primary">FinTech</span>
-                </div>
-                <p class="text-secondary">
-                  Building a multi-agent trading framework that mirrors real trading desks.
-                </p>
-                <ul class="fancy-list list-unstyled d-grid gap-2 text-secondary mb-0">
-                  <li>
-                    Achieved <strong>R² of 99.21</strong> and <strong>MAE 0.0045</strong> in real-time Nifty 50 forecasting across multiple horizons.
-                  </li>
-                  <li>
-                    Integrated FinBERT sentiment over <strong>5,000+ daily</strong> financial news sources, boosting performance by 7–10%.
-                  </li>
-                  <li>
-                    Designing multi-agent framework aggregating technical, fundamental, sentiment &amp; macro signals.
-                  </li>
+                <ul class="plain">
+                  <li>Developed LoRA-based adaptation for graph neural operator surrogates of full-wave electromagnetic simulation, running 1,400&times; faster than numerical solvers and cutting data needed for new geometries by 4&times;.</li>
+                  <li>Benchmarked neural operator, graph neural network, and transformer architectures on 3D interdigital filter meshes in NVIDIA PhysicsNeMo, reaching 2% error on S-parameters and 8% on H-field prediction across 8K designs.</li>
                 </ul>
+              </li>
+              <li class="role">
+                <div class="role-head">
+                  <h3>Graduate Researcher, BioNLP Lab</h3>
+                  <p class="role-meta">UMass Amherst, with Prof. Hong Yu<br />Sep 2025 to Dec 2025</p>
+                </div>
+                <ul class="plain">
+                  <li>Built a multimodal agentic pipeline for medical visual question answering with vision-language models and training-free GRPO, comparing prompt-only, experience-based, and tool-augmented agents under inference budgets.</li>
+                  <li>Tool-augmented agents improved accuracy by 12% and experience-based agents by 7% over the prompt-only baseline.</li>
+                </ul>
+              </li>
+              <li class="role">
+                <div class="role-head">
+                  <h3>Founding Engineer, AI/ML</h3>
+                  <p class="role-meta">Stealth fintech AI startup, Kolkata<br />May 2025 to Oct 2025</p>
+                </div>
+                <ul class="plain">
+                  <li>Built multi-horizon equity forecasting (15-minute to daily) for NIFTY-50 stocks, from feature engineering through real-time inference with BiLSTM-attention and transformer models.</li>
+                  <li>Designed a multi-agent LLM trading framework with specialized technical, fundamental, and sentiment agents, improving Sharpe ratio by 15% and reducing maximum drawdown by 20% over single-model baselines in backtests.</li>
+                </ul>
+              </li>
+              <li class="role">
+                <div class="role-head">
+                  <h3>Research and Development Intern</h3>
+                  <p class="role-meta">Samsung Research Institute, Noida<br />May 2024 to Aug 2024</p>
+                </div>
+                <ul class="plain">
+                  <li>Built an OCR pipeline that digitized 1,000+ medical documents and parsed them into structured JSON, deployed on Samsung devices.</li>
+                  <li>Improved text detection from 75% (ML Kit baseline) to 89% through targeted fine-tuning.</li>
+                </ul>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="section">
+        <div class="wrap split">
+          <h2 class="section-title">Projects</h2>
+          <div class="section-body">
+            <div class="projects">
+              <article class="project">
+                <h3>Disaggregated LLM inference engine</h3>
+                <p class="role-meta">Jan 2026 to Apr 2026</p>
+                <p>
+                  Separates prefill and decode across dedicated GPU pools with KV cache transfer and independent
+                  scheduling. Improved SLO goodput by 59% and time-to-first-token by 38% over a colocated baseline,
+                  validated with load sweeps from 0.5 to 4.0 requests per second.
+                </p>
+                <!-- Add the repo link: <p class="links"><a href="https://github.com/Utsavwh03/REPO" target="_blank" rel="noreferrer">Code</a></p> -->
+              </article>
+              <article class="project">
+                <h3>RLHF and safety evaluation for LLMs</h3>
+                <p class="role-meta">IIT Kharagpur, Feb 2025 to Apr 2025</p>
+                <p>
+                  Implemented RLHF with PPO and DPO, including reward modeling, and evaluated RESTA and DARE safety
+                  interventions on Gemma-2. Reduced LLM-judged unsafety from 0.566 to 0.398.
+                </p>
+                <p class="links"><a href="https://github.com/Utsav03wh/Safety-LLM/tree/main" target="_blank" rel="noreferrer">Code</a></p>
+              </article>
+            </div>
+
+            <details class="earlier">
+              <summary>Earlier systems work</summary>
+              <ul class="plain">
+                <li><a href="https://github.com/Utsavwh03/Reliable-UDP" target="_blank" rel="noreferrer">Reliable transport over UDP</a> with a concurrent SMTP/POP3 mail server, tested under 50% simulated packet loss.</li>
+                <li><a href="https://github.com/Utsavwh03/Virtual-Memory" target="_blank" rel="noreferrer">Virtual memory simulator</a> in C with paging, page fault handling, and LRU replacement.</li>
+                <li><a href="https://github.com/Utsav03wh/DBMS-Laboratory-Spr-24/tree/main/A5" target="_blank" rel="noreferrer">Distributed RAG pipeline</a> with Hadoop, Solr, and ZooKeeper.</li>
+              </ul>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education and skills -->
+      <section id="background" class="section section-tint">
+        <div class="wrap split">
+          <h2 class="section-title">Background</h2>
+          <div class="section-body two-col">
+            <div>
+              <h3 class="sub">Education</h3>
+              <div class="edu">
+                <p class="edu-school">University of Massachusetts Amherst</p>
+                <p>MS in Computer Science, GPA 4.0/4.0<br /><span class="role-meta">Sep 2025 to May 2027</span></p>
+                <p class="edu-courses">Advanced Reinforcement Learning, Machine Learning Research, Systems for Deep Learning, AI Alignment</p>
+              </div>
+              <div class="edu">
+                <p class="edu-school">Indian Institute of Technology Kharagpur</p>
+                <p>BTech in Computer Science and Engineering, CGPA 8.79/10<br /><span class="role-meta">Dec 2021 to May 2025</span></p>
               </div>
             </div>
-            <div class="col-lg-6">
-              <div class="experience-card rounded-4 p-4 h-100">
-                <div class="d-flex flex-column gap-3 align-items-center mb-3">
-                  <div>
-                    <h3 class="h5 mb-1">Research & Development Intern – Samsung Research Institute</h3>
-                    <div class="text-secondary small">Noida, India · May 2024 – Aug 2024</div>
-                  </div>
-                  <span class="badge rounded-pill text-bg-info">Computer Vision</span>
-                </div>
-                <p class="text-secondary">OCR &amp; document understanding for large-scale medical records.</p>
-                <ul class="fancy-list list-unstyled d-grid gap-2 text-secondary mb-0">
-                  <li>
-                    Digitized <strong>1,000+ medical documents</strong> via advanced OCR pipelines &amp; OpenCV preprocessing.
-                  </li>
-                  <li>
-                    Converted raw OCR output into structured JSON with medical entities using custom parsers.
-                  </li>
-                  <li>
-                    Integrated and fine-tuned PaddleOCR in Samsung’s Android stack achieving <strong>89% accuracy</strong>.
-                  </li>
-                </ul>
-              </div>
+            <div>
+              <h3 class="sub">Skills</h3>
+              <dl class="skills">
+                <dt>Methods</dt>
+                <dd>PPO, GRPO, DPO, RLHF, reward modeling, parameter-efficient fine-tuning, neural operators, LLM evaluation</dd>
+                <dt>Frameworks</dt>
+                <dd>PyTorch, JAX, Hugging Face Transformers and TRL, verl, OpenRLHF, vLLM, Gymnasium, PhysicsNeMo</dd>
+                <dt>Infrastructure</dt>
+                <dd>Distributed training, CUDA, Slurm, HPC, Docker, AWS</dd>
+                <dt>Languages</dt>
+                <dd>Python, C++, C, SQL, Bash</dd>
+              </dl>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="projects" class="py-6 text-center">
-        <div class="container-lg">
-          <div class="section-heading text-center mb-5">
-            <span class="badge rounded-pill text-bg-primary-subtle text-primary-emphasis mb-3">
-              Selected Projects
-            </span>
-            <h2 class="h1 fw-semibold">Research-grade builds with production polish</h2>
-            <p class="lead text-secondary mb-0">
-              A mix of research, systems, and production-style implementations. Each project links to
-              the corresponding code or paper.
+      <!-- Contact -->
+      <section id="contact" class="section contact">
+        <div class="wrap split">
+          <h2 class="section-title">Contact</h2>
+          <div class="section-body">
+            <p class="lede">
+              I'm happy to talk about research collaborations, RL and post-training roles, or anything in this page.
             </p>
-          </div>
-          <div class="row g-4 justify-content-center">
-            <div class="col-md-6 col-xl-4">
-              <article class="project-card h-100 rounded-4 p-4">
-                <div class="d-flex flex-column gap-3 align-items-center mb-3">
-                  <div>
-                    <h3 class="h5 mb-1">Developing &amp; Evaluating Safer Large Language Models</h3>
-                    <div class="text-secondary small">Safety Fundamentals for Gen AI · Feb 2025 – Apr 2025</div>
-                  </div>
-                  <span class="badge rounded-pill text-bg-warning">LLM Safety</span>
-                </div>
-                <p class="text-secondary">
-                  Implemented RLHF and DPO pipelines with <strong>bert-base-uncased</strong> reward modeling and
-                  <strong>gpt2-medium</strong> safety-tuned generation.
-                </p>
-                <ul class="fancy-list list-unstyled d-grid gap-2 text-secondary small mb-4">
-                  <li>Applied RESTA &amp; DARE decoding on <strong>Gemma-2</strong> variants with SFT &amp; safety vectors.</li>
-                  <li>Reduced LLM unsafety score from <strong>0.5663 → 0.3982</strong> under PEFT and full fine-tuning.</li>
-                </ul>
-                <div class="d-flex flex-wrap gap-2 mb-3 justify-content-center">
-                  <span class="badge rounded-pill text-bg-light text-dark">RLHF</span>
-                  <span class="badge rounded-pill text-bg-light text-dark">DPO</span>
-                  <span class="badge rounded-pill text-bg-light text-dark">Safety</span>
-                  <span class="badge rounded-pill text-bg-light text-dark">PyTorch</span>
-                </div>
-                <a
-                  class="btn btn-sm btn-ghost rounded-pill"
-                  href="https://github.com/Utsav03wh/Safety-LLM/tree/main"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  View Code <i class="bi bi-arrow-up-right ms-1"></i>
-                </a>
-              </article>
-            </div>
-            <div class="col-md-6 col-xl-4">
-              <article class="project-card h-100 rounded-4 p-4">
-                <div class="d-flex flex-column gap-3 align-items-center mb-3">
-                  <div>
-                    <h3 class="h5 mb-1">Counter-Arguments to Anti-Vaccine Tweets</h3>
-                    <div class="text-secondary small">B.Tech Thesis · Aug 2024 – Present</div>
-                  </div>
-                  <span class="badge rounded-pill text-bg-danger">NLP</span>
-                </div>
-                <p class="text-secondary">
-                  End-to-end pipeline generating counter-arguments to vaccine misinformation with compact,
-                  fine-tuned LLMs.
-                </p>
-                <ul class="fancy-list list-unstyled d-grid gap-2 text-secondary small mb-4">
-                  <li>Fine-tuned <strong>LLaMA</strong> &amp; <strong>Gemma</strong> using GPT-generated, label-aware data.</li>
-                  <li>Human evaluation with pro &amp; anti-vaccine annotators for balanced assessment.</li>
-                  <li>Reached <strong>ROUGE-L 0.304</strong> / <strong>BERTScore F1 0.895</strong> rivaling GPT-4o quality.</li>
-                </ul>
-                <div class="d-flex flex-wrap gap-2 mb-3 justify-content-center">
-                  <span class="badge rounded-pill text-bg-light text-dark">LLMs</span>
-                  <span class="badge rounded-pill text-bg-light text-dark">Argument Generation</span>
-                  <span class="badge rounded-pill text-bg-light text-dark">Responsible AI</span>
-                </div>
-                <div class="d-flex flex-wrap gap-2 justify-content-center">
-                  <a
-                    class="btn btn-sm btn-ghost rounded-pill"
-                    href="https://github.com/Utsavwh03/Counter-Vax/tree/main"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    View Code <i class="bi bi-arrow-up-right ms-1"></i>
-                  </a>
-                  <a
-                    class="btn btn-sm btn-ghost rounded-pill"
-                    href="https://arxiv.org/abs/2510.16359"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Read Paper <i class="bi bi-arrow-up-right ms-1"></i>
-                  </a>
-                </div>
-              </article>
-            </div>
-            <div class="col-md-6 col-xl-4">
-              <article class="project-card h-100 rounded-4 p-4">
-                <div class="d-flex flex-column gap-3 align-items-center mb-3">
-                  <div>
-                    <h3 class="h5 mb-1">RAG with Hadoop for Chain-of-Thought LLMs</h3>
-                    <div class="text-secondary small">DBMS Lab · Feb 2024 – Apr 2024</div>
-                  </div>
-                  <span class="badge rounded-pill text-bg-success">Distributed Systems</span>
-                </div>
-                <p class="text-secondary">
-                  Distributed RAG pipeline combining Hadoop, Solr, and Zookeeper to power chain-of-thought queries with
-                  Gemini via LangChain.
-                </p>
-                <ul class="fancy-list list-unstyled d-grid gap-2 text-secondary small mb-4">
-                  <li>Deployed Solr/Zookeeper as indexers for large-scale structured data.</li>
-                  <li>Integrated LangChain with <strong>Prometheus</strong> / <strong>Grafana</strong> monitoring.</li>
-                  <li>Leveraged Hadoop MapReduce and Apache Solr for scalable retrieval.</li>
-                </ul>
-                <div class="d-flex flex-wrap gap-2 mb-3 justify-content-center">
-                  <span class="badge rounded-pill text-bg-light text-dark">RAG</span>
-                  <span class="badge rounded-pill text-bg-light text-dark">Hadoop</span>
-                  <span class="badge rounded-pill text-bg-light text-dark">Solr</span>
-                  <span class="badge rounded-pill text-bg-light text-dark">LangChain</span>
-                </div>
-                <a
-                  class="btn btn-sm btn-ghost rounded-pill"
-                  href="https://github.com/Utsav03wh/DBMS-Laboratory-Spr-24/tree/main/A5"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  View Code <i class="bi bi-arrow-up-right ms-1"></i>
-                </a>
-              </article>
-            </div>
-            <div class="col-md-6 col-xl-4">
-              <article class="project-card h-100 rounded-4 p-4">
-                <div class="d-flex flex-column gap-3 align-items-center mb-3">
-                  <div>
-                    <h3 class="h5 mb-1">Reliable UDP &amp; Concurrent Mail Server</h3>
-                    <div class="text-secondary small">
-                      Computer Networks Lab · Mar 2024 – Aug 2024
-                    </div>
-                  </div>
-                  <span class="badge rounded-pill text-bg-secondary">Systems</span>
-                </div>
-                <p class="text-secondary">
-                  Modified transport protocol (MTP) atop UDP delivering TCP-like reliability and a concurrent mail
-                  server/client stack.
-                </p>
-                <ul class="fancy-list list-unstyled d-grid gap-2 text-secondary small mb-4">
-                  <li>Multi-threaded architecture supporting <strong>25+ simultaneous sockets</strong>.</li>
-                  <li>Stress-tested under <strong>50% simulated packet loss</strong> with guaranteed delivery.</li>
-                  <li>SMTP/POP3-based mail server for efficient email transmission.</li>
-                </ul>
-                <div class="d-flex flex-wrap gap-2 mb-3 justify-content-center">
-                  <span class="badge rounded-pill text-bg-light text-dark">C</span>
-                  <span class="badge rounded-pill text-bg-light text-dark">Networking</span>
-                  <span class="badge rounded-pill text-bg-light text-dark">Systems</span>
-                </div>
-                <a
-                  class="btn btn-sm btn-ghost rounded-pill"
-                  href="https://github.com/Utsavwh03/Reliable-UDP"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  View Code <i class="bi bi-arrow-up-right ms-1"></i>
-                </a>
-              </article>
-            </div>
-            <div class="col-md-6 col-xl-4">
-              <article class="project-card h-100 rounded-4 p-4">
-                <div class="d-flex flex-column gap-3 align-items-center mb-3">
-                  <div>
-                    <h3 class="h5 mb-1">Virtual Memory Simulation with Paging</h3>
-                    <div class="text-secondary small">Operating Systems Lab · Mar 2024 – Aug 2024</div>
-                  </div>
-                  <span class="badge rounded-pill text-bg-secondary">OS</span>
-                </div>
-                <p class="text-secondary">
-                  Virtual memory system in C simulating OS-style memory management for multiple concurrent processes.
-                </p>
-                <ul class="fancy-list list-unstyled d-grid gap-2 text-secondary small mb-4">
-                  <li>Implemented MMU with translation, page fault handling &amp; LRU replacement.</li>
-                  <li>Designed process scheduler for fair, realistic execution flow.</li>
-                </ul>
-                <div class="d-flex flex-wrap gap-2 mb-3 justify-content-center">
-                  <span class="badge rounded-pill text-bg-light text-dark">C</span>
-                  <span class="badge rounded-pill text-bg-light text-dark">Operating Systems</span>
-                  <span class="badge rounded-pill text-bg-light text-dark">Simulation</span>
-                </div>
-                <a
-                  class="btn btn-sm btn-ghost rounded-pill"
-                  href="https://github.com/Utsavwh03/Virtual-Memory"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  View Code <i class="bi bi-arrow-up-right ms-1"></i>
-                </a>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="publications" class="py-6 bg-soft">
-        <div class="container-lg">
-          <div class="section-heading text-center mb-5">
-            <span class="badge rounded-pill text-bg-primary-subtle text-primary-emphasis mb-3">
-              Publications
-            </span>
-            <h2 class="h1 fw-semibold">Publishing responsible AI research</h2>
-          </div>
-          <article class="publication-card rounded-4 p-4 p-lg-5 mx-auto">
-            <div class="d-flex flex-column flex-lg-row gap-4 align-items-lg-center">
-              <div class="publication-badge">
-                <i class="bi bi-journal-richtext"></i>
-              </div>
-              <div>
-                <h3 class="h4 mb-2">
-                  Utilising Large Language Models for Generating Effective Counter-Arguments to Anti-Vaccine Tweets
-                </h3>
-                <p class="text-secondary small mb-1">
-                  <strong class="text-light">U. Dhanuka</strong>, S. Poddar, S. Ghosh
-                </p>
-                <p class="text-secondary small mb-3">arXiv preprint · 2025</p>
-                <p class="text-secondary mb-4">
-                  Explores how LLMs can generate persuasive, context-aware counter-arguments for anti-vaccine content
-                  with careful human and automatic evaluation of quality and safety.
-                </p>
-                <div class="d-flex flex-wrap gap-3">
-                  <a
-                    class="btn btn-ghost rounded-pill"
-                    href="https://arxiv.org/abs/2510.16359"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Read on arXiv <i class="bi bi-arrow-up-right ms-1"></i>
-                  </a>
-                  <a
-                    class="btn btn-ghost rounded-pill"
-                    href="https://github.com/Utsavwh03/Counter-Vax/tree/main"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Project Code <i class="bi bi-arrow-up-right ms-1"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section id="skills" class="py-6 text-center">
-        <div class="container-lg">
-          <div class="section-heading text-center mb-5">
-            <span class="badge rounded-pill text-bg-primary-subtle text-primary-emphasis mb-3">
-              Skills
-            </span>
-            <h2 class="h1 fw-semibold">Depth across AI research, systems & tooling</h2>
-            <p class="lead text-secondary mb-0">
-              I enjoy combining statistical learning, deep learning, and systems programming to build practical,
-              research-grade tools.
-            </p>
-          </div>
-          <div class="row g-4 justify-content-center">
-            <div class="col-md-4">
-              <div class="skills-card rounded-4 p-4 h-100">
-                <h3 class="h5 mb-3 text-accent text-uppercase">Core Areas</h3>
-                <ul class="fancy-list list-unstyled d-grid gap-2 text-secondary mb-0">
-                  <li>Machine Learning &amp; Deep Learning</li>
-                  <li>Natural Language Processing</li>
-                  <li>Reinforcement Learning &amp; Agentic RL</li>
-                  <li>High-Performance &amp; Distributed Computing</li>
-                  <li>Data Structures &amp; Algorithms</li>
-                  <li>Systems &amp; Socket Programming</li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="skills-card rounded-4 p-4 h-100">
-                <h3 class="h5 mb-3 text-accent text-uppercase">Programming Languages</h3>
-                <ul class="fancy-list list-unstyled d-grid gap-2 text-secondary mb-0">
-                  <li>Python, C++, C</li>
-                  <li>SQL, Bash</li>
-                  <li>MIPS32 Assembly, Verilog, MATLAB</li>
-                  <li>HTML, CSS, LaTeX, GraphQL</li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="skills-card rounded-4 p-4 h-100">
-                <h3 class="h5 mb-3 text-accent text-uppercase">Frameworks &amp; Libraries</h3>
-                <ul class="fancy-list list-unstyled d-grid gap-2 text-secondary mb-0">
-                  <li>PyTorch, TensorFlow, Scikit-Learn</li>
-                  <li>Hugging Face Transformers</li>
-                  <li>LangChain, LangGraph, vLLM, Verl, RLFactory</li>
-                  <li>FASTAPI, Streamlit, MCP</li>
-                  <li>AWS &amp; Cloud Tooling</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="py-6 bg-soft">
-        <div class="container-lg">
-          <div class="row justify-content-center">
-            <div class="col-lg-8">
-              <div class="section-heading text-center mb-4">
-                <span class="badge rounded-pill text-bg-primary-subtle text-primary-emphasis mb-3">
-                  Contact
-                </span>
-                <h2 class="h1 fw-semibold">Let’s collaborate on the next breakthrough</h2>
-                <p class="text-secondary mb-0">
-                  Whether it’s research collaboration, quant/ML roles, or open-source projects, I’m happy to chat.
-                </p>
-              </div>
-              <div class="contact-card rounded-4 p-4 p-lg-5 text-lg-start text-center">
-                <div class="row g-4">
-                  <div class="col-md-6">
-                    <div class="contact-item">
-                      <h3 class="h6 text-uppercase text-accent mb-2">Email</h3>
-                      <a class="link-light" href="mailto:utsavdhanuka03@gmail.com">
-                        <i class="bi bi-envelope me-2"></i>utsavdhanuka03@gmail.com
-                      </a>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="contact-item">
-                      <h3 class="h6 text-uppercase text-accent mb-2">LinkedIn</h3>
-                      <a
-                        class="link-light"
-                        href="https://www.linkedin.com/in/utsav-dhanuka-a36b14226/"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <i class="bi bi-linkedin me-2"></i>utsav-dhanuka
-                      </a>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="contact-item">
-                      <h3 class="h6 text-uppercase text-accent mb-2">GitHub</h3>
-                      <a
-                        class="link-light"
-                        href="https://github.com/Utsavwh03"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <i class="bi bi-github me-2"></i>Utsavwh03
-                      </a>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="contact-item">
-                      <h3 class="h6 text-uppercase text-accent mb-2">Phone</h3>
-                      <a class="link-light" href="tel:+14133137893">
-                        <i class="bi bi-phone me-2"></i>+1 (413) 313-7893
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <ul class="contact-list">
+              <li><span class="contact-k">Email</span><a href="mailto:utsavdhanuka03@gmail.com">utsavdhanuka03@gmail.com</a></li>
+              <li><span class="contact-k">GitHub</span><a href="https://github.com/Utsavwh03" target="_blank" rel="noreferrer">Utsavwh03</a></li>
+              <li><span class="contact-k">LinkedIn</span><a href="https://www.linkedin.com/in/utsav-dhanuka-a36b14226/" target="_blank" rel="noreferrer">utsav-dhanuka</a></li>
+              <li><span class="contact-k">Phone</span><a href="tel:+14133137893">+1 (413) 313-7893</a></li>
+            </ul>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="py-4 border-0 text-center">
-      <div class="container-lg d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3">
-        <p class="mb-0 text-secondary">
-          © <span id="year"></span> Utsav Dhanuka. Crafted with Bootstrap, Jekyll-ready structure &amp; care.
-        </p>
-        <p class="mb-0 text-secondary">
-          Hosted on
-          <a class="link-light" href="https://pages.github.com/" target="_blank" rel="noreferrer">
-            GitHub Pages
-          </a>
-          .
-        </p>
+    <footer class="footer">
+      <div class="wrap">
+        <p>&copy; <span id="year"></span> Utsav Dhanuka. Amherst, Massachusetts.</p>
       </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
